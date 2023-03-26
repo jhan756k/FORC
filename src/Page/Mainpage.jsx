@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import Navbar from '../Component/Navbar';
 import "../Style/Mainpage.css"
+import Navbar from '../Component/Navbar';
 import Card from '../Component/Card';
 
 const Mainpage = () => {
@@ -33,6 +33,7 @@ const Mainpage = () => {
 
     return (
         <div>
+            
             <Navbar/>
             <div className="wrapper">
                 <div className="newtitle">최신 소식</div>
