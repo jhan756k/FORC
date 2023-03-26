@@ -1,0 +1,40 @@
+.card {
+    background-color: #faebd7;
+    border: 3px solid black;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+}
+.card:hover {
+    box-shadow: 0 0 20px orange;
+    transform: scale(1.02); 
+    cursor: pointer;
+}
+.wrap {
+    position: relative;
+    align-items: center;
+    text-align: center;
+    text-decoration: none
+    
+}
+.carddate{
+    margin-top: 3%;
+    color: gray;
+    font-size:15px;
+}
+.cardtitle {
+    font-size: 40px;
+    font-weight: bold;
+    color:black;
+    margin-bottom: 2%;
+}
+.cardtext {
+    font-size: 15px;
+    color: black;
+    margin-bottom: 4%;
+}

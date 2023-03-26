@@ -1,0 +1,31 @@
+.wrapper {
+    position: relative;
+    align-items: center;
+    text-align: center;
+    margin-top: 2%;
+    justify-content: center;
+    text-decoration: none;
+}
+.newtitle {
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 4%;
+}
+.newtitle::after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 5px;
+    width: 130px;
+    top:13%;
+    left: 50%;
+    background-color: orange;
+    transform: translateX(-50%);
+}
+.cards {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
