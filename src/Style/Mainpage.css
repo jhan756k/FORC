@@ -5,7 +5,7 @@
     margin-top: 2%;
     justify-content: center;
     text-decoration: none;
-    margin-bottom: 1220px;
+    margin-bottom: 80px;
 }
 .newtitle {
     font-size: 60px;
@@ -17,8 +17,8 @@
     position: absolute;
     display: block;
     height: 5px;
-    width: 130px;
-    top:13%;
+    width: 120px;
+    top:14%;
     left: 50%;
     background-color: orange;
     transform: translateX(-50%);
@@ -29,4 +29,21 @@
     margin-left: 5%;
     margin-right: 5%;
     margin-bottom: 5%;
+}
+.allposts {
+    padding: 8px 30px 13px 30px;
+    margin:0;
+    border:2px solid orange;
+    font-size:25px;
+    font-weight: bold;
+    color: white;
+    background-color: orange;
+    font-family: 'Oswald', sans-serif;
+    transition: all 0.4s ease-out;
+    text-decoration: none;
+}
+.allposts:hover {
+    background-color: black;
+    border: 2px solid orange;
+    cursor: pointer;
 }

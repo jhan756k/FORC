@@ -3,23 +3,6 @@ import "../Style/Sticknav.css"
 
 const Sticknav = () => {
 
-    const handleScroll = () => {
-        const position = window.pageYOffset;
-
-        if (position > 800) {
-            document.querySelector('.stick').style.backgroundColor = "rgba(255, 255, 255, 0.9)";
-        } else {
-            document.querySelector('.stick').style.backgroundColor = "transparent";
-        }
-    };
-
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll, { passive: true });
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
-
     return (
         <div className="stick">
             <div className="items">

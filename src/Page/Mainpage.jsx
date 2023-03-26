@@ -33,7 +33,6 @@ const Mainpage = () => {
 
     return (
         <div>
-            
             <Navbar/>
             <div className="wrapper">
                 <div className="newtitle">최신 소식</div>
@@ -42,6 +41,7 @@ const Mainpage = () => {
                         <Card img={item.img} date={item.date} title={item.title} text={item.text}/>
                     ))}
                 </div>
+                <a href="/" className="allposts">모든 공지 보기</a>
             </div>
         </div>
     );
