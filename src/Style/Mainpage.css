@@ -5,7 +5,8 @@
     margin-top: 2%;
     justify-content: center;
     text-decoration: none;
-    margin-bottom: 80px;
+    padding-bottom: 80px;
+    border-bottom: 3px solid #e6e6e6;
 }
 .newtitle {
     font-size: 60px;
@@ -17,8 +18,8 @@
     position: absolute;
     display: block;
     height: 5px;
-    width: 120px;
-    top:14%;
+    width: 100px;
+    top:11%;
     left: 50%;
     background-color: orange;
     transform: translateX(-50%);
@@ -46,4 +47,26 @@
     background-color: black;
     border: 2px solid orange;
     cursor: pointer;
+}
+
+/* 활동분야 / 캠페인 */
+.camp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
+.camptitle{
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 4%;
+}
+.campcards {
+    display: flex;
+    justify-content: space-between;
+    width:58%;
 }
