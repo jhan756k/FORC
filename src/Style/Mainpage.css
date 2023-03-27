@@ -70,3 +70,52 @@
     justify-content: space-between;
     width:58%;
 }
+.ctitle {
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin: 0px 0px 10px 0px;
+    padding: 0px;
+    line-height: 1.2;
+}
+.cimg {
+    filter: brightness(0.5);
+    display: block;
+    transition: transform 0.4s ease-out;
+}
+.cimg:hover {
+    transform: scale(1.2);
+    transform-origin: 50% 50%;
+    cursor: pointer;
+}
+.campimg {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    border: 5px solid white;
+}
+.campimg:hover {
+    border: 5px solid orange;
+    cursor: pointer;
+}
+.camc {
+    position: relative;
+}
+.titletext {
+    position: absolute;
+    pointer-events: none;
+    left: 50%;
+    top:20%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+.titletext:hover {
+    cursor: pointer;
+}
+.ttx {
+    margin: 0;
+}

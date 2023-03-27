@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import "../Style/Mainpage.css"
 import Navbar from '../Component/Navbar';
 import Card from '../Component/Card';
-import Campaign from '../Component/Campaign';
 
 const Mainpage = () => {
     const [news, setNews] = useState([
@@ -32,7 +31,7 @@ const Mainpage = () => {
         }
     ]);
 
-    const [campaigns, setCampaigns] = useState([
+    const campaigns = [
         {
             img: "/images/forest.jpg",
             title: ["Forest", "산림"]
@@ -41,7 +40,7 @@ const Mainpage = () => {
             img: "/images/bee.jpg",
             title: ["Beekeeping", "양봉"]
         }
-    ]);
+    ];
 
     return (
         <div>
@@ -59,7 +58,15 @@ const Mainpage = () => {
                 <h1 className="camptitle">활동분야 / 캠페인</h1>
                 <div className="campcards">
                     {campaigns.map((item) => (
-                        <Campaign img={item.img} title={item.title}/>
+                        <div className="camc">
+                            <div className="campimg">
+                                <img src={item.img} alt="" className="cimg"/>
+                            </div>
+                            <div className="titletext">
+                                <h1 className="ttx">{item.title[0]}</h1>
+                                <h1 className="ttx">{item.title[1]}</h1>
+                            </div>
+                        </div>
                     ))}
                 </div>
             </div>

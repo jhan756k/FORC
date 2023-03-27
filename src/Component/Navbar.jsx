@@ -6,11 +6,11 @@ const Navbar = () => {
 
     const handleScroll = () => {
         const position = window.pageYOffset;
-
+        console.log(position);
         if (position > document.querySelector('.img').height) {
             document.querySelector('.stick').style.backgroundColor = "rgba(255, 255, 255, 0.9)";
         } else {
-            document.querySelector('.stick').style.backgroundColor = "transparent";
+            document.querySelector('.stick').style.backgroundColor = "rgba(255, 255, 255, 0.3)";
         }
     };
 
