@@ -39,6 +39,10 @@ const Mainpage = () => {
         {
             img: "/images/bee.jpg",
             title: ["Beekeeping", "양봉"]
+        },
+        {
+            img: "/images/light.jpg",
+            title: ["Pollution", "공해"]
         }
     ];
 
@@ -54,11 +58,12 @@ const Mainpage = () => {
                 </div>
                 <a href="/" className="allposts">모든 공지 보기</a>
             </div>
+            
             <div className="camp">
                 <h1 className="camptitle">활동분야 / 캠페인</h1>
                 <div className="campcards">
                     {campaigns.map((item) => (
-                        <div className="camc">
+                        <a href="/" className="camc">
                             <div className="campimg">
                                 <img src={item.img} alt="" className="cimg"/>
                             </div>
@@ -66,7 +71,7 @@ const Mainpage = () => {
                                 <h1 className="ttx">{item.title[0]}</h1>
                                 <h1 className="ttx">{item.title[1]}</h1>
                             </div>
-                        </div>
+                        </a>
                     ))}
                 </div>
             </div>

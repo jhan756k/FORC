@@ -7,10 +7,10 @@ const Navbar = () => {
     const handleScroll = () => {
         const position = window.pageYOffset;
         console.log(position);
-        if (position > document.querySelector('.img').height) {
-            document.querySelector('.stick').style.backgroundColor = "rgba(255, 255, 255, 0.9)";
+        if (position === 0) {
+            document.querySelector('.stick').style.backgroundColor = "transparent";
         } else {
-            document.querySelector('.stick').style.backgroundColor = "rgba(255, 255, 255, 0.3)";
+            document.querySelector('.stick').style.backgroundColor = "rgba(255,255,255,1)";
         }
     };
 
@@ -19,7 +19,22 @@ const Navbar = () => {
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
-    }, []);
+    }, []); 
+
+    const images = [
+        "/images/afternoon.jpg",
+        "/images/mountain.jpg",
+        "/images/bird.jpg",
+    ];
+
+    let i = 0;
+    setInterval(() => {
+        document.querySelector('.img').src = images[i];
+        i++;
+        if (i === images.length) {
+            i = 0;
+        }
+    }, 10000);
 
     return (
         <div className="wrap">

@@ -56,19 +56,31 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-bottom: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 10%;
+    border-bottom: 3px solid #e6e6e6;
 }
 .camptitle{
     font-size: 60px;
     font-weight: bold;
     margin-bottom: 4%;
+    position: relative;
+}
+.camptitle::after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 5px;
+    width: 100px;
+    top:115%;
+    left: 50%;
+    background-color: orange;
+    transform: translateX(-50%);
 }
 .campcards {
     display: flex;
     justify-content: space-between;
-    width:58%;
 }
 .ctitle {
     font-size: 50px;
@@ -80,7 +92,7 @@
     line-height: 1.2;
 }
 .cimg {
-    filter: brightness(0.5);
+    filter: brightness(0.7);
     display: block;
     transition: transform 0.4s ease-out;
 }
@@ -109,7 +121,7 @@
     top:20%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
     text-align: center;
 }

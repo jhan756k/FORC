@@ -13,6 +13,7 @@
 .img {
     width: 100%;
     object-fit: contain;
+    transition: all 0.4s ease-out;
 }
 .titdiv{
     text-align: center;
