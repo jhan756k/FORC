@@ -36,7 +36,7 @@
     height: 4px;
     top:78%;
     left: 0;
-    background-color: goldenrod;
+    background-color: orange;
     transform-origin: bottom center;
     transition: transform 0.3s ease-out;
 }

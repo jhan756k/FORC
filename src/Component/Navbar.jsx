@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react';
 import "../Style/Navbar.css"
 import Sticknav from './Sticknav';
+import Slideshow from './Slideshow';
 
 const Navbar = () => {
 
@@ -21,26 +22,11 @@ const Navbar = () => {
         };
     }, []); 
 
-    const images = [
-        "/images/afternoon.jpg",
-        "/images/mountain.jpg",
-        "/images/bird.jpg",
-    ];
-
-    let i = 0;
-    setInterval(() => {
-        document.querySelector('.img').src = images[i];
-        i++;
-        if (i === images.length) {
-            i = 0;
-        }
-    }, 10000);
-
     return (
         <div className="wrap">
-            <div className="image">
-                <img src="/images/mountain.jpg" alt="Logo" className='img'/>
-            </div>
+
+            <Slideshow/>
+            
             <div className="onimg">
                 <Sticknav/>
                 <div className="fullname">
