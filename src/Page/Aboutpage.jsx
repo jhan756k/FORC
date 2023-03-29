@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Sticknav from "../Component/Sticknav";
+import Member from "../Component/Member";
 import "../Style/Aboutpage.css";
 
 const Aboutpage = () => {
@@ -52,11 +53,25 @@ const Aboutpage = () => {
       </div>
 
       <div className="fields">
+
         <div className="president">
-          <h1 className="position">대표이사</h1> 
+          <h1 className="position">대표이사</h1>
+          <h1 className="prestext">민족사관고등학교 3학년 서우찬</h1>
+          <div className="exp">
+            <img src="images/woochan.png" alt="" className="presimg" />
+            <h1 className="presexp">
+              - FORC 총책임자
+              <br />- KBS 출연자
+              <br />- 다수의 수상경력
+              <br />- 다수의 연구진행
+              <br />- 제 2의 파브르
+            </h1>
+          </div>
+        </div>
+
+        <div className="forestfield">
           
         </div>
-        <div className="forestfield"></div>
         <div className="beekeepingfield"></div>
         <div className="pollutionfield"></div>
       </div>

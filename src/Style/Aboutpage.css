@@ -1,17 +1,82 @@
 .aboutimg {
-    width: 100%;
-    filter: brightness(60%);
-    position: absolute;
-    margin-top: 90px;
+  width: 100%;
+  filter: brightness(60%);
+  position: absolute;
 }
 .abouttext {
-    position: absolute;
-    color: white;
-    font-size: 60px;
-    font-weight: bold;
-    left:50%;
-    width: 80%;
-    transform: translateX(-50%);
-    top: 5%;
-    text-shadow: 2px 2px 2px orange;
+  position: absolute;
+  color: white;
+  font-size: 60px;
+  font-weight: bold;
+  left: 50%;
+  width: 80%;
+  padding-top: 2%;
+  transform: translateX(-50%);
+  text-shadow: 4px 4px 4px black;
+}
+.aboutwrap {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.awr{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.fields{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 40%;
+  text-align: center;
+  align-items: center;
+}
+.position {
+  font-size: 70px;
+  font-weight: bold;
+  color: black;
+}
+.position::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 5%;
+  height: 5px;
+  background: orange;
+  margin-top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.exp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  width:100%;
+}
+.presimg {
+  filter: brightness(120%);
+  outline: 3px solid gray;
+  outline-offset: 5px;
+}
+.presexp {
+  font-size: 30px;
+  font-weight: bold;
+  color: black;
+  margin-left: 10%;
+  text-align: start;
+  text-decoration: gray underline 3px;
+  text-underline-offset: 6px;
+}
+.prestext {
+  font-size: 35px;
+  font-weight: bold;
+  color: black;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.president {
+  padding-bottom: 10%;
+  width: 40%;
 }
