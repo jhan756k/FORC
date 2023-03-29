@@ -1,0 +1,17 @@
+.aboutimg {
+    width: 100%;
+    filter: brightness(60%);
+    position: absolute;
+    margin-top: 90px;
+}
+.abouttext {
+    position: absolute;
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
+    left:50%;
+    width: 80%;
+    transform: translateX(-50%);
+    top: 5%;
+    text-shadow: 2px 2px 2px orange;
+}

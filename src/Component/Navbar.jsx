@@ -33,7 +33,7 @@ const Navbar = () => {
                     <h1 className='fntit'>
                         Forest Organization of Research <br/>& Conservation
                     </h1>
-                    <button className="imgabout">About Us</button>
+                    <a className="imgabout" href='/about'>About Us</a>
                 </div>
             </div>
         </div>

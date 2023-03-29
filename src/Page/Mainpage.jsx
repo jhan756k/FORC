@@ -75,6 +75,7 @@ const Mainpage = () => {
                     ))}
                 </div>
             </div>
+            
         </div>
     );
 };
