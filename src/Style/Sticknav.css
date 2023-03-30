@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
 .stick {
   position: fixed;
   top: 0;
@@ -27,6 +29,10 @@
   text-decoration: none;
   font-size: 35px;
   font-weight: bold;
+  border: none;
+  background: transparent;
+  font-family: 'Oswald', sans-serif;
+  padding: 0;
 }
 .item::after {
   content: "";
@@ -39,6 +45,9 @@
   background-color: orange;
   transform-origin: bottom center;
   transition: transform 0.3s ease-out;
+}
+.item:hover {
+  cursor: pointer;
 }
 .item:hover::after {
   transform: scaleX(1);

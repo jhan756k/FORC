@@ -19,21 +19,10 @@ const Aboutpage = () => {
   }, []);
 
   const [member, setMember] = useState([
+
     {
-      img: "/images/1.jpg",
-      name: "서우찬",
-      position: "대표",
-      explain: "자연 생태계 보존을 위한 연구를 진행하는 FORC 입니다.",
-    },
-    {
-      img: "/images/2.jpg",
-      name: "김태훈",
-      position: "대표",
-      explain: "자연 생태계 보존을 위한 연구를 진행하는 FORC 입니다.",
-    },
-    {
-      img: "/images/3.jpg",
-      name: "김태훈",
+      img: "/images/newuser.png",
+      name: "민족사관고등학교 2학년 김환희",
       position: "대표",
       explain: "자연 생태계 보존을 위한 연구를 진행하는 FORC 입니다.",
     },
@@ -70,7 +59,15 @@ const Aboutpage = () => {
         </div>
 
         <div className="forestfield">
-          
+          <h1 className="position">산림 & 토양</h1>
+          {member.map((member) => (
+            <Member
+              img={member.img}
+              name={member.name}
+              position={member.position}
+              explain={member.explain}
+            />
+          ))}
         </div>
         <div className="beekeepingfield"></div>
         <div className="pollutionfield"></div>

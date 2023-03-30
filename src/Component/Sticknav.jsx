@@ -2,6 +2,15 @@ import React from "react";
 import "../Style/Sticknav.css";
 
 const Sticknav = () => {
+  async function campaignClick() {
+    window.location.assign("/");
+    let pos = await document.querySelector(".camp").offsetTop;
+    window.scrollTo({
+      top: pos - 90,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div className="stick">
       <div className="items">
@@ -11,9 +20,11 @@ const Sticknav = () => {
           </a>
         </div>
         <div className="iwrap">
-          <a href="/" className="item">
+          <button
+            className="item"
+            onClick={() => (campaignClick())}>
             Campaign
-          </a>
+          </button>
         </div>
 
         <a href="/" className="title">

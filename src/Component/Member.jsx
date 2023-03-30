@@ -4,9 +4,9 @@ import "../Style/Member.css";
 const Member = ({ img, name, position, explain }) => {
   return (
     <div className="mwrap">
-      <img src={img} alt="" />
+      <img src={img} alt="" className="memimg"/>
       <div className="mtext">
-        <h1>{name}</h1>
+        <h1 className="mtit">{name}</h1>
         <h2>{position}</h2>
         <p>{explain}</p>
       </div>

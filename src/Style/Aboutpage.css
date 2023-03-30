@@ -19,12 +19,12 @@
   flex-direction: column;
   position: relative;
 }
-.awr{
+.awr {
   display: flex;
   flex-direction: column;
   position: relative;
 }
-.fields{
+.fields {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -53,7 +53,7 @@
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  width:100%;
+  width: 100%;
 }
 .presimg {
   filter: brightness(120%);
@@ -79,4 +79,13 @@
 .president {
   padding-bottom: 10%;
   width: 40%;
+}
+
+.forestfield {
+  width: 80%;
+  border: 5px solid orange;
+  border-radius: 20px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
 }

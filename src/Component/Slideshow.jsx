@@ -7,7 +7,7 @@ const Slideshow = () => {
     "/images/afternoon.jpg",
     "/images/bird.jpg",
   ];
-  const delay = 6000;
+  const delay = 5000;
   const [index, setIndex] = useState(0);
   const timeoutRef = useRef(null);
 
