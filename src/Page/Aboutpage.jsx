@@ -21,10 +21,10 @@ const Aboutpage = () => {
   const [member, setMember] = useState([
 
     {
-      img: "/images/newuser.png",
+      img: "/images/hh1.jpg",
       name: "민족사관고등학교 2학년 김환희",
-      position: "대표",
-      explain: "자연 생태계 보존을 위한 연구를 진행하는 FORC 입니다.",
+      position: "회원",
+      explain: "안녕하세요 저는 최준영 입니다",
     },
   ]);
 

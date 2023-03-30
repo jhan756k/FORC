@@ -3,7 +3,6 @@ import "../Style/Sticknav.css";
 
 const Sticknav = () => {
   async function campaignClick() {
-    window.location.assign("/");
     let pos = await document.querySelector(".camp").offsetTop;
     window.scrollTo({
       top: pos - 90,
