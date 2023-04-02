@@ -1,6 +1,9 @@
 import React, { useEffect } from "react";
 import Sticknav from "../Component/Sticknav";
 import "../Style/Loginpage.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebookF, faGoogle, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faUser } from '@fortawesome/free-solid-svg-icons'
 
 const Loginpage = () => {
     useEffect(() => {
@@ -31,7 +34,7 @@ const Loginpage = () => {
                             <form action="#" class="sign-in-form">
                                 <h2 class="titlelog">Sign in</h2>
                                 <div class="input-field">
-                                    <i class="fas fa-user"></i>
+                                    <FontAwesomeIcon icon={faUser} size="2xl" />
                                     <input type="text" placeholder="Username" />
                                 </div>
                                 <div class="input-field">
@@ -51,16 +54,16 @@ const Loginpage = () => {
                                 </p>
                                 <div class="social-media">
                                     <a href="#" class="social-icon">
-                                        <i class="fab fa-facebook-f"></i>
+                                        <FontAwesomeIcon icon={faFacebookF} />
                                     </a>
                                     <a href="#" class="social-icon">
-                                        <i class="fab fa-twitter"></i>
+                                        <FontAwesomeIcon icon={faTwitter} />
                                     </a>
                                     <a href="#" class="social-icon">
-                                        <i class="fab fa-google"></i>
+                                        <FontAwesomeIcon icon={faGoogle} />
                                     </a>
                                     <a href="#" class="social-icon">
-                                        <i class="fab fa-linkedin-in"></i>
+                                        <FontAwesomeIcon icon={faLinkedinIn} />
                                     </a>
                                 </div>
                             </form>
@@ -91,16 +94,16 @@ const Loginpage = () => {
                                 </p>
                                 <div class="social-media">
                                     <a href="#" class="social-icon">
-                                        <i class="fab fa-facebook-f"></i>
+                                        <FontAwesomeIcon icon={faFacebookF} />
                                     </a>
                                     <a href="#" class="social-icon">
-                                        <i class="fab fa-twitter"></i>
+                                        <FontAwesomeIcon icon={faTwitter} />
                                     </a>
                                     <a href="#" class="social-icon">
-                                        <i class="fab fa-google"></i>
+                                        <FontAwesomeIcon icon={faGoogle} />
                                     </a>
                                     <a href="#" class="social-icon">
-                                        <i class="fab fa-linkedin-in"></i>
+                                        <FontAwesomeIcon icon={faLinkedinIn} />
                                     </a>
                                 </div>
                             </form>

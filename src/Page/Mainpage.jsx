@@ -1,9 +1,22 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../Style/Mainpage.css";
 import Navbar from "../Component/Navbar";
 import Card from "../Component/Card";
 
 const Mainpage = () => {
+  useEffect(() => {
+    let queryParams = new URLSearchParams(window.location.search);
+    let snum = queryParams.get("s");
+
+    if (snum === "1") {
+      setTimeout(() => {
+        window.scrollTo({
+          top: document.querySelector(".camp").offsetTop - 90,
+          behavior: "smooth",
+        });
+      }, 200);
+    }
+  });
 
   function reveal() {
     var reveals = document.querySelectorAll(".reveal");

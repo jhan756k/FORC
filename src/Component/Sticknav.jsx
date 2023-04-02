@@ -3,18 +3,22 @@ import "../Style/Sticknav.css";
 
 const Sticknav = () => {
   async function campaignClick() {
-    let pos = await document.querySelector(".camp").offsetTop;
-    window.scrollTo({
-      top: pos - 90,
-      behavior: "smooth",
-    });
+
+    if (window.location.pathname !=="/") {
+      window.location.href = "/?s=1";
+    } else{
+      window.scrollTo({
+        top: document.querySelector(".camp").offsetTop - 90,
+        behavior: "smooth",
+      });
+    }
   };
 
   return (
     <div className="stick">
       <div className="items">
         <div className="iwrap">
-          <a href="/" className="item">
+          <a href="/about" className="item">
             About
           </a>
         </div>

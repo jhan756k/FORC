@@ -3,7 +3,7 @@ import "../Style/Card.css";
 
 const Card = ({ img, date, title, text }) => {
   return (
-    <div class="reveal">
+    <div className="reveal">
       <a href="/" className="wrap">
         <div className="card">
           <div className="cardimg">
