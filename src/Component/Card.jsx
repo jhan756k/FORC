@@ -3,11 +3,11 @@ import "../Style/Card.css";
 
 const Card = ({ img, date, title, text }) => {
   return (
-    <div>
+    <div class="reveal">
       <a href="/" className="wrap">
         <div className="card">
           <div className="cardimg">
-            <img src={img} alt="news" />
+            <img src={img} alt="news" className="cardimg"/>
           </div>
           <div className="carddate">{date}</div>
           <div className="cardtitle">{title}</div>

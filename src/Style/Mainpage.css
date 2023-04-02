@@ -1,134 +1,145 @@
 .wrapper {
-  position: relative;
-  align-items: center;
-  text-align: center;
-  margin-top: 2%;
-  justify-content: center;
-  text-decoration: none;
-  padding-bottom: 80px;
-  border-bottom: 3px solid #e6e6e6;
+    position: relative;
+    align-items: center;
+    text-align: center;
+    margin-top: 2%;
+    justify-content: center;
+    text-decoration: none;
+    padding-bottom: 80px;
+    border-bottom: 3px solid #e6e6e6;
 }
 .newtitle {
-  font-size: 60px;
-  font-weight: bold;
-  margin-bottom: 4%;
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 4%;
 }
 .newtitle::after {
-  content: "";
-  position: absolute;
-  display: block;
-  height: 5px;
-  width: 100px;
-  top: 11%;
-  left: 50%;
-  background-color: orange;
-  transform: translateX(-50%);
+    content: "";
+    position: absolute;
+    display: block;
+    height: 5px;
+    width: 100px;
+    top: 11%;
+    left: 50%;
+    background-color: orange;
+    transform: translateX(-50%);
 }
 .cards {
-  display: flex;
-  justify-content: space-between;
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-bottom: 5%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
 }
 .allposts {
-  padding: 8px 30px 13px 30px;
-  margin: 0;
-  border: 2px solid orange;
-  font-size: 25px;
-  font-weight: bold;
-  color: white;
-  background-color: orange;
-  font-family: "Oswald", sans-serif;
-  transition: all 0.4s ease-out;
-  text-decoration: none;
+    padding: 8px 30px 13px 30px;
+    margin: 0;
+    border: 2px solid orange;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    background-color: orange;
+    font-family: "Oswald", sans-serif;
+    transition: all 0.4s ease-out;
+    text-decoration: none;
 }
 .allposts:hover {
-  background-color: black;
-  border: 2px solid orange;
-  cursor: pointer;
+    background-color: black;
+    border: 2px solid orange;
+    cursor: pointer;
 }
 
 /* 활동분야 / 캠페인 */
 .camp {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-bottom: 10%;
-  border-bottom: 3px solid #e6e6e6;
-  margin-bottom: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 10%;
+    border-bottom: 3px solid #e6e6e6;
+    margin-bottom: 30%;
 }
 .camptitle {
-  font-size: 60px;
-  font-weight: bold;
-  margin-bottom: 4%;
-  position: relative;
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 4%;
+    position: relative;
 }
 .camptitle::after {
-  content: "";
-  position: absolute;
-  display: block;
-  height: 5px;
-  width: 100px;
-  top: 115%;
-  left: 50%;
-  background-color: orange;
-  transform: translateX(-50%);
+    content: "";
+    position: absolute;
+    display: block;
+    height: 5px;
+    width: 100px;
+    top: 115%;
+    left: 50%;
+    background-color: orange;
+    transform: translateX(-50%);
 }
 .campcards {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 .ctitle {
-  font-size: 50px;
-  font-weight: bold;
-  color: white;
-  text-align: center;
-  margin: 0px 0px 10px 0px;
-  padding: 0px;
-  line-height: 1.2;
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin: 0px 0px 10px 0px;
+    padding: 0px;
+    line-height: 1.2;
 }
 .cimg {
-  filter: brightness(0.7);
-  display: block;
-  transition: transform 0.4s ease-out;
+    filter: brightness(0.7);
+    display: block;
+    transition: transform 0.4s ease-out;
 }
 .cimg:hover {
-  transform: scale(1.2);
-  transform-origin: 50% 50%;
-  cursor: pointer;
+    transform: scale(1.2);
+    transform-origin: 50% 50%;
+    cursor: pointer;
 }
 .campimg {
-  display: inline-block;
-  position: relative;
-  overflow: hidden;
-  border: 5px solid white;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    border: 5px solid white;
 }
 .campimg:hover {
-  border: 5px solid orange;
-  cursor: pointer;
+    border: 5px solid orange;
+    cursor: pointer;
 }
 .camc {
-  position: relative;
+    position: relative;
 }
 .titletext {
-  position: absolute;
-  pointer-events: none;
-  left: 50%;
-  top: 20%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 25px;
-  font-weight: bold;
-  text-align: center;
+    position: absolute;
+    pointer-events: none;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
 }
 .titletext:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 .ttx {
-  margin: 0;
+    margin: 0;
+}
+
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
 }

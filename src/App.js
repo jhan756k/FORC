@@ -1,6 +1,7 @@
 import React from "react";
 import Mainpage from "./Page/Mainpage";
 import Aboutpage from "./Page/Aboutpage";
+import Loginpage from "./Page/Loginpage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Mainpage />} />
         <Route path="/about" element={<Aboutpage />} />
+        <Route path="/login" element={<Loginpage />} />
       </Routes>
     </BrowserRouter>
   );
