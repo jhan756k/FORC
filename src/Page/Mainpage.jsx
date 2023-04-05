@@ -14,7 +14,7 @@ const Mainpage = () => {
           top: document.querySelector(".camp").offsetTop - 90,
           behavior: "smooth",
         });
-      }, 200);
+      }, 1000);
     }
   });
 
