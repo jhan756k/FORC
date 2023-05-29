@@ -78,3 +78,9 @@
   width: 100%;
   text-align: center;
 }
+
+@media (max-width: 562px){
+    .fntit {
+        font-size: 65px;
+    }
+}

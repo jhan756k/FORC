@@ -9,12 +9,12 @@ const Mainpage = () => {
     let snum = queryParams.get("s");
 
     if (snum === "1") {
-      setTimeout(() => {
+      window.addEventListener("load", () => {
         window.scrollTo({
           top: document.querySelector(".camp").offsetTop - 90,
           behavior: "smooth",
         });
-      }, 1000);
+      });
     }
   });
 
