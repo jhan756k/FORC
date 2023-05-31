@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Sticknav from "../Component/Sticknav";
 import Member from "../Component/Member";
 import "../Style/Aboutpage.css";
+import Subfooter from "../Component/Subfooter";
 
 const Aboutpage = () => {
   const handleScroll = () => {
@@ -19,7 +20,6 @@ const Aboutpage = () => {
   }, []);
 
   const [member, setMember] = useState([
-
     {
       img: "/images/hh1.jpg",
       name: "민족사관고등학교 2학년 김환희",
@@ -42,7 +42,6 @@ const Aboutpage = () => {
       </div>
 
       <div className="fields">
-
         <div className="president">
           <h1 className="position">대표이사</h1>
           <h1 className="prestext">민족사관고등학교 3학년 서우찬</h1>
@@ -72,6 +71,7 @@ const Aboutpage = () => {
         <div className="beekeepingfield"></div>
         <div className="pollutionfield"></div>
       </div>
+      <Subfooter />
     </div>
   );
 };

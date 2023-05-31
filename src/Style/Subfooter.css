@@ -1,0 +1,51 @@
+.main-footer {
+  color: white;
+  background-color: #2d3e50;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.frow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 25px;
+}
+
+.ftitle {
+  color: white;
+  font-size: 3em;
+  font-weight: bold;
+  margin-top: 25px;
+  margin-bottom: 5px;
+}
+
+.llist {
+  display: grid;
+}
+
+.slink {
+  text-decoration: none;
+  color: orange;
+  font-size: 1.5em;
+  padding-left: 0px;
+  transition: color 0.3s ease-in-out, padding-left 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.slink:hover {
+  color: black;
+  padding-left: 5px;
+}
+
+.copyright {
+  padding-left: 1%;
+  padding-right: 5%;
+  padding-top: 10px;
+  padding-bottom: 18px;
+  color: white;
+  font-size: 1.2em;
+}

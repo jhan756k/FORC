@@ -17,6 +17,15 @@ const Mainpage = () => {
         });
       });
     }
+
+    else if (snum === "2"){
+      window.addEventListener("load", () => {
+        window.scrollTo({
+          top: document.querySelector(".wrapper").offsetTop - 100,
+          behavior: "smooth",
+        });
+      });
+    }
   });
 
   function reveal() {

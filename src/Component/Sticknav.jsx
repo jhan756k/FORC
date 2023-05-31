@@ -35,12 +35,12 @@ const Sticknav = () => {
         </a>
 
         <div className="iwrap">
-          <a href="/login" className="item">
+          <a href="/join" className="item">
             Join Us
           </a>
         </div>
         <div className="iwrap">
-          <a href="/register" className="item">
+          <a href="/donate" className="item">
             Donate
           </a>
         </div>

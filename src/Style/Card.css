@@ -6,6 +6,7 @@
   text-align: center;
   transition: all 0.2s ease-in-out;
   border-radius: 25px;
+  border: 3px solid gray;
 }
 .card:hover {
   box-shadow: 0 0 20px orange;
@@ -36,7 +37,7 @@
   padding-right: 1%;
   margin-bottom: 4%;
 }
-.cardimg{
+.cardimg {
   object-fit: cover;
   height: 300px;
   width: 100%;

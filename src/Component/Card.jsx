@@ -7,7 +7,7 @@ const Card = ({ img, date, title, text }) => {
       <a href="/" className="wrap">
         <div className="card">
           <div className="cardimg">
-            <img src={img} alt="news" className="cardimg"/>
+            <img src={img} alt="news" className="cardimg" />
           </div>
           <div className="carddate">{date}</div>
           <div className="cardtitle">{title}</div>
