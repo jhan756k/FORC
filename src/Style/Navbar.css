@@ -77,10 +77,17 @@
   font-weight: bold;
   width: 100%;
   text-align: center;
+  margin-bottom: 80px;
 }
 
-@media (max-width: 562px){
-    .fntit {
-        font-size: 65px;
-    }
+@media (max-width: 580px){
+  .fntit {
+    font-size: 65px;
+  }
+}
+
+@media (max-width: 425px){
+  .fntit {
+    font-size: 55px;
+  }
 }

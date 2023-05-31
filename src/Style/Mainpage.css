@@ -139,7 +139,7 @@
   position: relative;
   transform: translateY(150px);
   opacity: 0;
-  transition: 1s all ease;
+  transition: 0.4s all ease;
 }
 .reveal.active{
   transform: translateY(0);
@@ -152,7 +152,7 @@
     }
 }
 
-@media (max-width: 523px){
+@media (max-width: 540px){
     .camptitle{
         font-size: 45px;
     }
@@ -166,5 +166,11 @@
         left: 50%;
         background-color: orange;
         transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 450px){
+    .camc{
+        transform: scale(0.8);
     }
 }

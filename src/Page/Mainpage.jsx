@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../Style/Mainpage.css";
 import Navbar from "../Component/Navbar";
 import Card from "../Component/Card";
+import Subfooter from "../Component/Subfooter";
 
 const Mainpage = () => {
   useEffect(() => {
@@ -113,6 +114,7 @@ const Mainpage = () => {
           ))}
         </div>
       </div>
+      <Subfooter />
     </div>
   );
 };
