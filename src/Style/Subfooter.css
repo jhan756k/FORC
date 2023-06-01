@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+
 .main-footer {
   color: white;
   background-color: #2d3e50;
@@ -21,6 +23,42 @@
   font-weight: bold;
   margin-top: 25px;
   margin-bottom: 5px;
+}
+
+.fieldwrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.inpf {
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid #2d3e50;
+  padding-left: 10px;
+  font-size: 1.2em;
+  outline: none;
+  margin-bottom: 5px;
+}
+
+.subbut {
+  border-radius: 5px;
+  border: 2px solid orange;
+  background-color: transparent;
+  color: orange;
+  font-size: 1.2em;
+  font-weight: bolder;
+  height: 40px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.subbut:hover {
+  background-color: orange;
+  color: white;
+  cursor: pointer;
+}
+
+.inpf:focus {
+  border: 2px solid orange;
 }
 
 .llist {

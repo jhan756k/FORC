@@ -56,6 +56,12 @@ const Subfooter = () => {
           {/* Column3 */}
           <div className="fcol">
             <h1 className="ftitle">SUBSCRIBE</h1>
+            <div className="fieldwrap">
+              <input type="text" placeholder="E-mail" className="inpf" />
+              <input type="text" placeholder="First Name" className="inpf" />
+              <input type="text" placeholder="Last Name" className="inpf" />
+              <button className="subbut">Subscribe to newsletter</button>
+            </div>
           </div>
         </div>
         <hr />
