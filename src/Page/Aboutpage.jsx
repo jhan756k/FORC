@@ -56,7 +56,7 @@ const Aboutpage = () => {
             </h1>
           </div>
         </div>
-
+        
         <div className="forestfield">
           <h1 className="position">산림 & 토양</h1>
           {member.map((member) => (

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import axios from "axios";
 import "../Style/Mainpage.css";
 import Navbar from "../Component/Navbar";
 import Card from "../Component/Card";
@@ -16,9 +17,7 @@ const Mainpage = () => {
           behavior: "smooth",
         });
       });
-    }
-
-    else if (snum === "2"){
+    } else if (snum === "2") {
       window.addEventListener("load", () => {
         window.scrollTo({
           top: document.querySelector(".wrapper").offsetTop - 100,
@@ -45,32 +44,18 @@ const Mainpage = () => {
   window.addEventListener("scroll", reveal);
   reveal();
 
-  const [news, setNews] = useState([
-    {
-      img: "/images/cctv.png",
-      date: "2021. 07. 01",
-      title: "FORC ",
-      text: "저희는 숲의 보존과 관련된 프로젝...",
-    },
-    {
-      img: "/images/doc.png",
-      date: "2021. 07. 02",
-      title: "Paperwork",
-      text: "문서 작성하는 것은 재미가 더럽게...",
-    },
-    {
-      img: "/images/lightpanel.png",
-      date: "2021. 07. 03",
-      title: "Energy",
-      text: "친환경 에너지를 사용해야 지구가 ...",
-    },
-    {
-      img: "/images/cctv.png",
-      date: "2021. 07. 04",
-      title: "Surveillance",
-      text: "숲을 지키기 위해 감시를 하면서 ...",
-    },
-  ]);
+  const [news, setNews] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:5000/api/news/")
+      .then((res) => {
+        setNews(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
 
   const campaigns = [
     {
