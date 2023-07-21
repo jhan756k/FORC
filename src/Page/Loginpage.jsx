@@ -3,22 +3,19 @@ import Sticknav from "../Component/Sticknav";
 import "../Style/Loginpage.css";
 
 const Loginpage = () => {
+  const handleScroll = () => {
+    document.querySelector(".stick").style.backgroundColor =
+      "rgba(255,255,255,1)";
+  };
+
   useEffect(() => {
     document.querySelector(".stick").style.backgroundColor =
       "rgba(255,255,255,1)";
-    document.querySelector(".stick").style.zIndex = "100";
-    const sign_in_btn = document.querySelector("#sign-in-btn");
-    const sign_up_btn = document.querySelector("#sign-up-btn");
-    const container = document.querySelector(".container");
-
-    sign_up_btn.addEventListener("click", () => {
-      container.classList.add("sign-up-mode");
-    });
-
-    sign_in_btn.addEventListener("click", () => {
-      container.classList.remove("sign-up-mode");
-    });
-  });
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <div>
