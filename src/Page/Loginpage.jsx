@@ -1,6 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Sticknav from "../Component/Sticknav";
 import "../Style/Loginpage.css";
+import axios from "axios";
 
 const Loginpage = () => {
   const handleScroll = () => {
@@ -17,9 +18,133 @@ const Loginpage = () => {
     };
   }, []);
 
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
+
+  const loginPress = () => {
+    let formn = document.getElementById("ffsub");
+    if (formn.elements[0].value === "" || formn.elements[2].value === "") {
+      alert("모든 항목을 입력해주세요.");
+      return;
+    } else {
+      axios
+        .post("http://localhost:5000/api/users/login", {
+          name: formn.elements[0].value,
+          password: formn.elements[2].value,
+        })
+        .then((res) => {
+          console.log(res);
+          alert("로그인이 완료되었습니다.");
+          window.location.href = "/";
+        })
+        .catch((err) => {
+          alert(err);
+        });
+    }
+  };
+  const registerPress = () => {
+    let formn = document.getElementById("ffsub");
+    if (
+      formn.elements[0].value === "" ||
+      formn.elements[1].value === "" ||
+      formn.elements[2].value === ""
+    ) {
+      alert("모든 항목을 입력해주세요.");
+      return;
+    } else if (
+      !formn.elements[1].value.match(
+        /^([0-9a-zA-Z_-]+)@([0-9a-zA-Z_-]+)(\.[0-9a-zA-Z_-]+){1,2}$/
+      )
+    ) {
+      alert("이메일을 정확히 입력해주세요.");
+      return;
+    } else {
+      axios
+        .post("http://localhost:5000/api/users/", {
+          name: formn.elements[0].value,
+          email: formn.elements[1].value,
+          password: formn.elements[2].value,
+        })
+        .then((res) => {
+          console.log(res);
+          alert("회원가입이 완료되었습니다.");
+          window.location.href = "/";
+        })
+        .catch((err) => {
+          alert(err.response.data.msg);
+        });
+    }
+  };
+
+  const [isFirst, setIsFirst] = useState(true);
+
   return (
     <div>
       <Sticknav />
+      <div className="logindiv">
+        <form className="loginform" id="ffsub">
+          <div className="loginexp">FORC에 방문해주셔서 감사합니다.</div>
+          <div className="sloginexp">로그인 후 이용해주세요.</div>
+          <input
+            type="text"
+            className="form-control"
+            id="name"
+            placeholder="아이디"
+            onChange={(e) => {
+              setFormData({ ...formData, name: e.target.value });
+            }}
+          />
+          <input
+            type="text"
+            className="form-control"
+            id="email"
+            placeholder="이메일"
+            onChange={(e) => {
+              setFormData({ ...formData, email: e.target.value });
+            }}
+          />
+          <input
+            type="password"
+            className="form-control"
+            id="password"
+            placeholder="비밀번호"
+            onChange={(e) => {
+              setFormData({ ...formData, password: e.target.value });
+            }}
+          />
+          <button
+            className="loginsubmit"
+            onClick={(e) => {
+              e.preventDefault();
+              loginPress();
+            }}
+          >
+            <span>로그인</span>
+          </button>
+          <button
+            className="registerbutton"
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById("email").style.display = "inline-block";
+              document.getElementsByClassName("loginsubmit")[0].style.display =
+                "none";
+              document.getElementsByClassName("sloginexp")[0].innerHTML =
+                "회원가입 후 이용해주세요.";
+              document.getElementsByClassName("loginsubmit")[0].disabled = true;
+              if (isFirst) {
+                setIsFirst(false);
+              } else {
+                registerPress();
+              }
+            }}
+          >
+            <span>회원가입</span>
+          </button>
+        </form>
+      </div>
     </div>
   );
 };

@@ -1,1 +1,98 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+.logindiv {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginform {
+    margin-top: 70px;
+    width: 500px;
+    height: 600px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginexp {
+    width: 400px;
+    height: 50px;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 100px;
+    color: orange;
+}
+
+.sloginexp {
+    width: 400px;
+    height: 50px;
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 20px; 
+    color: black; 
+}
+
+.form-control {
+    width: 400px;
+    height: 50px;
+    border-radius: 0px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;    
+}
+
+.form-control:focus {
+    outline: 1px solid orange;
+    border: 1px solid orange;   
+}
+
+.loginsubmit {
+    width: 421.6px;
+    height: 50px;
+    border: 1px solid orange;
+    background-color: orange;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.loginsubmit:hover {
+    background-color: white;
+    color: orange;
+    border: 1px solid orange;
+    cursor: pointer;
+}
+
+.registerbutton {
+    width: 421.6px;
+    height: 50px;
+    border: 1px solid orange;
+    background-color: white;
+    color: orange;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.registerbutton:hover {
+    background-color: orange;
+    color: white;
+    border: 1px solid orange;
+    cursor: pointer;
+}
+
+#email {
+    display: none;
+    transition: 1s;
+}
