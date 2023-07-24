@@ -27,7 +27,7 @@ const Loginpage = () => {
     if (token) {
       const decoded = jwt_decode(token);
       axios
-        .post("http://localhost:5000/api/auth", { token: token })
+        .post("https://api.render.com/deploy/srv-civ90qk07spttthvii0g?key=uy2g3CfgJJE" || "http://localhost:5000/api/news/", { token: token })
         .then((res) => {
           if (decoded.role === "admin") {
             setIsAdmin(true);
@@ -61,7 +61,7 @@ const Loginpage = () => {
       return;
     } else {
       axios
-        .post("http://localhost:5000/api/users/login", {
+        .post("https://api.render.com/deploy/srv-civ90qk07spttthvii0g?key=uy2g3CfgJJE" || "http://localhost:5000/api/news/", {
           name: formn.elements[0].value,
           password: formn.elements[2].value,
         })
