@@ -48,7 +48,7 @@ const Mainpage = () => {
 
   useEffect(() => {
     axios
-      .get("https://api.render.com/deploy/srv-civ90qk07spttthvii0g?key=uy2g3CfgJJE" || "http://localhost:5000/api/news/")
+      .get("https://forc-back.onrender.com/api/news" || "http://localhost:5000/api/news/")
       .then((res) => {
         setNews(res.data);
       })
