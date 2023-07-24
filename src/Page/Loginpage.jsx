@@ -21,20 +21,32 @@ const Loginpage = () => {
 
   const [loggedIn, setLoggedIn] = useState(false);
   const [isAdmin, setIsAdmin] = useState(false);
-  const token = localStorage.getItem("token");
+  let token = localStorage.getItem("token");
 
   useEffect(() => {
     if (token) {
       const decoded = jwt_decode(token);
-      if (decoded.role !== "admin") {
-        setLoggedIn(true);
-        setIsAdmin(false);
-      } else {
-        setLoggedIn(true);
-        setIsAdmin(true);
-      }
+      axios
+        .post("http://localhost:5000/api/auth", { token: token })
+        .then((res) => {
+          if (decoded.role === "admin") {
+            setIsAdmin(true);
+            setLoggedIn(true);
+          } else {
+            setIsAdmin(false);
+            setLoggedIn(true);
+          }
+        })
+        .catch((err) => {
+          alert(err.response.data.message);
+          setLoggedIn(false);
+          setIsAdmin(false);
+        });
+    } else {
+      setLoggedIn(false);
+      setIsAdmin(false);
     }
-  }, [loggedIn, isAdmin, token]);
+  }, [token]);
 
   const [formData, setFormData] = useState({
     name: "",
