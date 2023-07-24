@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Sticknav from "../Component/Sticknav";
 import "../Style/Loginpage.css";
 import axios from "axios";
+import jwt_decode from "jwt-decode";
 
 const Loginpage = () => {
   const handleScroll = () => {
@@ -17,6 +18,23 @@ const Loginpage = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const [loggedIn, setLoggedIn] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(false);
+  const token = localStorage.getItem("token");
+
+  useEffect(() => {
+    if (token) {
+      const decoded = jwt_decode(token);
+      if (decoded.role !== "admin") {
+        setLoggedIn(true);
+        setIsAdmin(false);
+      } else {
+        setLoggedIn(true);
+        setIsAdmin(true);
+      }
+    }
+  }, [loggedIn, isAdmin, token]);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -36,12 +54,12 @@ const Loginpage = () => {
           password: formn.elements[2].value,
         })
         .then((res) => {
-          console.log(res);
-          alert("로그인이 완료되었습니다.");
+          alert(res.data.message);
+          localStorage.setItem("token", res.data.token);
           window.location.href = "/";
         })
         .catch((err) => {
-          alert(err);
+          alert(err.response.data.message);
         });
     }
   };
@@ -69,84 +87,128 @@ const Loginpage = () => {
           password: formn.elements[2].value,
         })
         .then((res) => {
-          console.log(res);
-          alert("회원가입이 완료되었습니다.");
+          alert(res.data.message);
           window.location.href = "/";
         })
         .catch((err) => {
-          alert(err.response.data.msg);
+          alert(err.response.data.message);
         });
     }
   };
 
   const [isFirst, setIsFirst] = useState(true);
 
-  return (
-    <div>
-      <Sticknav />
-      <div className="logindiv">
-        <form className="loginform" id="ffsub">
-          <div className="loginexp">FORC에 방문해주셔서 감사합니다.</div>
-          <div className="sloginexp">로그인 후 이용해주세요.</div>
-          <input
-            type="text"
-            className="form-control"
-            id="name"
-            placeholder="아이디"
-            onChange={(e) => {
-              setFormData({ ...formData, name: e.target.value });
-            }}
-          />
-          <input
-            type="text"
-            className="form-control"
-            id="email"
-            placeholder="이메일"
-            onChange={(e) => {
-              setFormData({ ...formData, email: e.target.value });
-            }}
-          />
-          <input
-            type="password"
-            className="form-control"
-            id="password"
-            placeholder="비밀번호"
-            onChange={(e) => {
-              setFormData({ ...formData, password: e.target.value });
-            }}
-          />
+  if (!loggedIn) {
+    return (
+      <div>
+        <Sticknav />
+        <div className="logindiv">
+          <form className="loginform" id="ffsub">
+            <div className="loginexp">FORC에 방문해주셔서 감사합니다.</div>
+            <div className="sloginexp">로그인 후 이용해주세요.</div>
+            <input
+              type="text"
+              className="form-control"
+              id="name"
+              placeholder="아이디"
+              onChange={(e) => {
+                setFormData({ ...formData, name: e.target.value });
+              }}
+            />
+            <input
+              type="text"
+              className="form-control"
+              id="email"
+              placeholder="이메일"
+              onChange={(e) => {
+                setFormData({ ...formData, email: e.target.value });
+              }}
+            />
+            <input
+              type="password"
+              className="form-control"
+              id="password"
+              placeholder="비밀번호"
+              onChange={(e) => {
+                setFormData({ ...formData, password: e.target.value });
+              }}
+            />
+            <button
+              className="loginsubmit"
+              onClick={(e) => {
+                e.preventDefault();
+                loginPress();
+              }}
+            >
+              <span>로그인</span>
+            </button>
+            <button
+              className="registerbutton"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById("email").style.display = "inline-block";
+                document.getElementsByClassName(
+                  "loginsubmit"
+                )[0].style.display = "none";
+                document.getElementsByClassName("sloginexp")[0].innerHTML =
+                  "회원가입 후 이용해주세요.";
+                document.getElementsByClassName(
+                  "loginsubmit"
+                )[0].disabled = true;
+                if (isFirst) {
+                  setIsFirst(false);
+                } else {
+                  registerPress();
+                }
+              }}
+            >
+              <span>회원가입</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    );
+  } else {
+    return (
+      <div>
+        <Sticknav />
+        <div className="logoutdiv">
+          {isAdmin ? (
+            <button
+              className="loginsubmit"
+              onClick={(e) => {
+                e.preventDefault();
+              }}
+            >
+              <span>웹사이트 관리</span>
+            </button>
+          ) : (
+            () => {}
+          )}
           <button
             className="loginsubmit"
             onClick={(e) => {
               e.preventDefault();
-              loginPress();
             }}
           >
-            <span>로그인</span>
+            <span>내 정보 보기</span>
           </button>
           <button
             className="registerbutton"
             onClick={(e) => {
               e.preventDefault();
-              document.getElementById("email").style.display = "inline-block";
-              document.getElementsByClassName("loginsubmit")[0].style.display =
-                "none";
-              document.getElementsByClassName("sloginexp")[0].innerHTML =
-                "회원가입 후 이용해주세요.";
-              document.getElementsByClassName("loginsubmit")[0].disabled = true;
-              if (isFirst) {
-                setIsFirst(false);
-              } else {
-                registerPress();
-              }
+              setLoggedIn(false);
+              localStorage.removeItem("token");
+              alert("로그아웃 되었습니다.");
+              window.location.href = "/";
             }}
           >
-            <span>회원가입</span>
+            <span>로그아웃</span>
           </button>
-        </form>
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 };
 
 export default Loginpage;
