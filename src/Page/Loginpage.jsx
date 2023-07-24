@@ -27,7 +27,7 @@ const Loginpage = () => {
     if (token) {
       const decoded = jwt_decode(token);
       axios
-        .post("https://api.render.com/deploy/srv-civ90qk07spttthvii0g?key=uy2g3CfgJJE" || "http://localhost:5000/api/news/", { token: token })
+        .post("https://api.render.com/deploy/srv-civ90qk07spttthvii0g?key=uy2g3CfgJJE" || "http://localhost:5000/api/auth", { token: token })
         .then((res) => {
           if (decoded.role === "admin") {
             setIsAdmin(true);
@@ -61,7 +61,7 @@ const Loginpage = () => {
       return;
     } else {
       axios
-        .post("https://api.render.com/deploy/srv-civ90qk07spttthvii0g?key=uy2g3CfgJJE" || "http://localhost:5000/api/news/", {
+        .post("https://api.render.com/deploy/srv-civ90qk07spttthvii0g?key=uy2g3CfgJJE" || "http://localhost:5000/api/users/login", {
           name: formn.elements[0].value,
           password: formn.elements[2].value,
         })
@@ -93,7 +93,7 @@ const Loginpage = () => {
       return;
     } else {
       axios
-        .post("http://localhost:5000/api/users/", {
+        .post("https://api.render.com/deploy/srv-civ90qk07spttthvii0g?key=uy2g3CfgJJE" || "http://localhost:5000/api/users/", {
           name: formn.elements[0].value,
           email: formn.elements[1].value,
           password: formn.elements[2].value,
