@@ -21,13 +21,13 @@ const Loginpage = () => {
 
   const [loggedIn, setLoggedIn] = useState(false);
   const [isAdmin, setIsAdmin] = useState(false);
-  let token = localStorage.getItem("token");
 
   useEffect(() => {
-    if (token) {
+    try {
+      const token = localStorage.getItem("token");
       const decoded = jwt_decode(token);
       axios
-        .post("https://forc-back.onrender.com/api/auth" || "http://localhost:5000/api/auth", { token: token })
+        .post("http://localhost:5000/api/auth", { token: token })
         .then((res) => {
           if (decoded.role === "admin") {
             setIsAdmin(true);
@@ -42,11 +42,11 @@ const Loginpage = () => {
           setLoggedIn(false);
           setIsAdmin(false);
         });
-    } else {
+    } catch {
       setLoggedIn(false);
       setIsAdmin(false);
     }
-  }, [token]);
+  }, []);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -61,7 +61,7 @@ const Loginpage = () => {
       return;
     } else {
       axios
-        .post("https://forc-back.onrender.com/api/users/login" || "http://localhost:5000/api/users/login", {
+        .post("http://localhost:5000/api/users/login", {
           name: formn.elements[0].value,
           password: formn.elements[2].value,
         })
@@ -93,7 +93,7 @@ const Loginpage = () => {
       return;
     } else {
       axios
-        .post("https://forc-back.onrender.com/api/users" || "http://localhost:5000/api/users/", {
+        .post("http://localhost:5000/api/users/", {
           name: formn.elements[0].value,
           email: formn.elements[1].value,
           password: formn.elements[2].value,
@@ -201,6 +201,7 @@ const Loginpage = () => {
             className="loginsubmit"
             onClick={(e) => {
               e.preventDefault();
+              document.location.href = "/info";
             }}
           >
             <span>내 정보 보기</span>

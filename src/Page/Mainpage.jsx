@@ -48,7 +48,7 @@ const Mainpage = () => {
 
   useEffect(() => {
     axios
-      .get("https://forc-back.onrender.com/api/news" || "http://localhost:5000/api/news/")
+      .get("http://localhost:5000/api/news/")
       .then((res) => {
         setNews(res.data);
       })
