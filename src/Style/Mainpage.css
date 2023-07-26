@@ -81,6 +81,7 @@
 }
 .campcards {
   display: flex;
+  width: 100%;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -145,7 +146,7 @@
   opacity: 1;
 }
 
-@media (max-width: 611px) {
+@media (max-width: 708px) {
   .cards {
     justify-content: center;
   }
@@ -153,7 +154,7 @@
 
 @media (max-width: 540px) {
   .camptitle {
-    font-size: 45px;
+    font-size: 40px;
   }
   .camptitle::after {
     content: "";
