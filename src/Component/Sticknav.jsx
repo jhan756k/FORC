@@ -56,12 +56,22 @@ const Sticknav = () => {
           <div className="dimscreen" />
           <div className="bnavigation">
             <ul>
-              <li>About</li>
-              <li>Campaign</li>
-              <li>Join Us</li>
-              <li>Donate</li>
+              <div className="panellinks">
+                <h1 className="paneltitle">Menu</h1>
+                <a href="/about" className="slink">
+                  About Us
+                </a>
+                <a href="#/" onClick={() => campaignClick()} className="slink">
+                  Campaign
+                </a>
+                <a href="/join" className="slink">
+                  Join Us
+                </a>
+                <a href="/donate" className="slink">
+                  Donate
+                </a>
+              </div>
             </ul>
-
             <div
               className="burgdiv"
               onClick={() => {
@@ -89,9 +99,9 @@ const Sticknav = () => {
             transform: ${hamburgerOpen ? "rotate(45deg)" : "rotate(0deg)"};
           }
           .b2 {
-            // transform: ${hamburgerOpen
-              ? "translateX(100%)"
-              : "translateX(0)"};
+            // transform: ${
+              hamburgerOpen ? "translateX(100%)" : "translateX(0)"
+            };
             opacity: ${hamburgerOpen ? "0" : "1"};
           }
           .b3 {
