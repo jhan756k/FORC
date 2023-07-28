@@ -48,20 +48,23 @@ const Infopage = () => {
     }
   }, []);
 
-  return (
-    <div>
-      <Sticknav />
-      <div className="infodiv">
-        <div className="infocard">
-          <div className="innername">{userInfo.name}</div>
-          <div className="inneremail">{userInfo.email}</div>
-          <div className="innerrole">
-            회원등급:<span className="rolespan">{userInfo.role}</span>
+  if (!loggedIn) return <div><Sticknav /></div>;
+  else {
+    return (
+      <div>
+        <Sticknav />
+        <div className="infodiv">
+          <div className="infocard">
+            <div className="innername">{userInfo.name}</div>
+            <div className="inneremail">{userInfo.email}</div>
+            <div className="innerrole">
+              회원등급:<span className="rolespan">{userInfo.role}</span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  }
 };
 
 export default Infopage;
