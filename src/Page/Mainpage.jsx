@@ -87,7 +87,7 @@ const Mainpage = () => {
             />
           ))}
         </div>
-        <a href="/" className="allposts">
+        <a href="/news" className="allposts">
           모든 공지 보기
         </a>
       </div>

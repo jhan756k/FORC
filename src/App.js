@@ -3,6 +3,7 @@ import Mainpage from "./Page/Mainpage";
 import Aboutpage from "./Page/Aboutpage";
 import Loginpage from "./Page/Loginpage";
 import Infopage from "./Page/Infopage";
+import Newspage from "./Page/Newspage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route path="/about" element={<Aboutpage />} />
         <Route path="/join" element={<Loginpage />} />
         <Route path="/info" element={<Infopage />} />
+        <Route path="/news" element={<Newspage />} />
       </Routes>
     </BrowserRouter>
   );

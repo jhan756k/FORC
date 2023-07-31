@@ -87,7 +87,7 @@ const Sticknav = () => {
           </div>
         </div>
       </div>
-      <style jsx>
+      <style jsx="true">
         {`
           .bnavigation ul {
             transform: translateX(${hamburgerOpen ? "0" : "100%"});

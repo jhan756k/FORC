@@ -1,0 +1,60 @@
+.tablediv {
+  align-items: center;
+  margin-top: 10rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  margin-bottom: 5rem;
+}
+
+.newstable {
+  border-bottom: #c9cccf solid 1px;
+  border-top: #c9cccf solid 1px;
+  justify-self: center;
+  align-self: center;
+  width: 100%;
+}
+.newsthead {
+  display: table-header-group;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  align-items: center;
+  width: 100%;
+}
+
+.newsth {
+  border-bottom: #c9cccf solid 1px;
+  border-top: #c9cccf solid 1px;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 8px 6px 8px 6px;
+}
+
+.n1 {
+  width: 7%;
+}
+.nan::after {
+  content: "";
+  display: inline-block;
+  color: black;
+  width: 0.05rem;
+  height: 1.4rem;
+  background-color: #c9cccf;
+  vertical-align: middle;
+  margin-left: 1rem;
+  margin-bottom: 0.25rem;
+}
+.n2 {
+  width: 66%;
+}
+.n3 {
+  width: 10%;
+}
+.n4 {
+  width: 10%;
+}
+.n5 {
+  width: 7%;
+}
